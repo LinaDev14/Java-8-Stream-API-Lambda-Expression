@@ -1,4 +1,4 @@
-package com.example.java8streamapilambdaexpression.impirative;
+package com.example.java8streamapilambdaexpression.imperative;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
