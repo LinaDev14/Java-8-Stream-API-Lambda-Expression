@@ -12,7 +12,7 @@ public class Scopes {
                 return n1 + n2+ n3;
             }
         };
-        
+
         return ope.calcular(1,1);
     }
 
