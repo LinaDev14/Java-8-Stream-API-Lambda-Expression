@@ -17,7 +17,7 @@ public class _Function {
         // combine functions
         Function<Integer, Integer> addBy1AndMultiplyBy10 =
                 incrementByOneFunction.andThen(multiplyBy10Function);
-        System.out.println(addBy1AndMultiplyBy10.apply(2));
+        System.out.println(addBy1AndMultiplyBy10.apply(4));
 
 
 
