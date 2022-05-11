@@ -4,15 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static com.example.java8streamapilambdaexpression.imperative.Gender.*;
+
 public class Main {
 
     public static void main(String[] args) {
         List<Person> people = List.of(
-            new Person("Lina", Gender.FEMALE),
-            new Person("Mateo", Gender.MALE),
-            new Person("Sandra", Gender.FEMALE),
-            new Person("Camilo", Gender.MALE),
-            new Person("Alejandra", Gender.FEMALE)
+            new Person("Lina", FEMALE),
+            new Person("Mateo", MALE),
+            new Person("Sandra", FEMALE),
+            new Person("Camilo", MALE),
+            new Person("Alejandra", FEMALE)
         );
 
         System.out.println("// Imperative approach");
@@ -20,7 +22,7 @@ public class Main {
         List<Person> females = new ArrayList<>();
 
         for(Person person: people){
-            if(Gender.FEMALE.equals(person.gender)){
+            if(FEMALE.equals(person.gender)){
                 females.add(person);
             }
         }
@@ -32,7 +34,7 @@ public class Main {
         System.out.println("// Declarative approach");
         // Declarative approach
         people.stream()
-                .filter(person -> Gender.FEMALE.equals(person.gender))
+                .filter(person -> FEMALE.equals(person.gender))
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
     }
